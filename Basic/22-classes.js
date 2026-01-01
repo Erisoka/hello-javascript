@@ -59,6 +59,31 @@ class Empleado extends Persona {
 const empleado1 = new Empleado("Luis", 28, "Desarrollador");
 empleado1.describir(); // Output: Soy Luis, tengo 28 años y trabajo como Desarrollador.
 
+class Gerente extends Empleado {
+  constructor(nombre, edad, puesto, departamento) {
+    super(nombre, edad, puesto);
+    this.departamento = departamento;
+  }
+  describir() {
+    console.log(`Soy ${this.nombre}, tengo ${this.edad} años, trabajo como ${this.puesto} y soy gerente del departamento de ${this.departamento}.`);
+  }
+}
+
+const gerente1 = new Gerente("Carlos", 40, "Gerente", "Desarrollo");
+gerente1.describir(); // Output: Soy Carlos, tengo 40 años, trabajo como Gerente y soy gerente del departamento de Desarrollo.
+
+class Interno extends Empleado {
+  constructor(nombre, edad, puesto, duracion) {
+    super(nombre, edad, puesto);
+    this.duracion = duracion; // duración en meses
+  }
+  describir() {
+    console.log(`Soy ${this.nombre}, tengo ${this.edad} años, trabajo como ${this.puesto} y mi pasantía dura ${this.duracion} meses.`);
+  }
+}
+const interno1 = new Interno("Sofia", 22, "Interno de Marketing", 6);
+interno1.describir(); // Output: Soy Sofia, tengo 22 años, trabajo como Interno de Marketing y mi pasantía dura 6 meses.
+
 // Propiedades y métodos estáticos
 class Matematica {
   static sumar(a, b) {
