@@ -20,13 +20,19 @@ export class Circulo {
   }
 
   area() {
-    return PI * this.radio * this.radio;
+    // return PI * this.radio * this.radio;
+    return Math.PI * Math.pow(this.radio, 2);
   }
 
   circunferencia() {
     return 2 * PI * this.radio;
   }
 
+  perimetro() {
+    return this.circunferencia();
+  }
+
 }
+
 
 // Resumen: Este módulo exporta funciones, una constante y una clase que pueden ser utilizadas en otros archivos JavaScript mediante la importación.

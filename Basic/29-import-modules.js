@@ -17,4 +17,10 @@ const miCirculo = new Circulo(5);
 console.log(miCirculo.area()); // Output: 78.53975
 console.log(miCirculo.circunferencia()); // Output: 31.4159
 
+console.log(miCirculo.area().toFixed(2)); // Output: 78.54
+console.log(miCirculo.circunferencia().toFixed(2)); // Output: 31.42
+
+/* const os = require('os');
+console.log(`Sistema Operativo: ${os.type()} ${os.release()}`); */
+
 // Resumen: Este código importa funciones, una constante y una clase desde otro módulo y las utiliza para mostrar saludos, despedidas, el valor de PI y calcular el área y la circunferencia de un círculo.
